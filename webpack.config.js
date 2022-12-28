@@ -12,6 +12,17 @@ module.exports = {
   },
 
   devServer: {
+    host: '0.0.0.0',
+    watchOptions: {
+      poll: true 
+    },
+    allowedHosts: 'all',
+    hot: true,
+    client: {
+      webSocketURL: {
+        port: 443
+      }
+    },
     port: 8080,
     historyApiFallback: true,
   },
